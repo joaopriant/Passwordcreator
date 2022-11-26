@@ -29,7 +29,7 @@ while (c > password.length){
         continue
     }
 }
-console.log(password)
+document.getElementById("exibir").value = password
 }
-document.getElementById("clickMe").onclick = gerador;
+document.getElementById("gerar").onclick = gerador;
 
