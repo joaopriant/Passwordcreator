@@ -3,7 +3,7 @@
         background-image: linear-gradient(45deg, rgb(113, 3, 197), rgb(222, 55, 0));
     }
     div{
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(0, 0, 0, 0.85);
         position: absolute;
         top: 50%;
         left: 50%;
