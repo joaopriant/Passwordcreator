@@ -1,7 +1,3 @@
-const { Random } =  require("random-js");
-
-const random = new Random();
-
 function gerador(){
 let password = [];
 const upper = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
@@ -12,22 +8,22 @@ const c = 15
 
 while (c > password.length){
 
-    let i = random.integer(0,3)
+    let i = Math.floor(Math.random()*4) 
 
     if(i === 0){
-        i = random.integer(0,25)
+        i = Math.floor(Math.random()*26)
         password = password+upper[i]
     }
     else if( i === 1){
-        i = random.integer(0,25)
+        i = Math.floor(Math.random()*26)
         password = password+lower[i] 
     }
     else if(i === 2){
-        i = random.integer(0,9)
+        i = Math.floor(Math.random()*10)
         password = password+number[i]
     }
     else if(i === 3){
-        i = random.integer(0,24)
+        i = Math.floor(Math.random()*25)
         password = password+symbols[i]
     }else{
         continue
@@ -35,16 +31,5 @@ while (c > password.length){
 }
 console.log(password)
 }
-form.addEventListener('submit', function (e) {
-    e.preventDefault();
+document.getElementById("clickMe").onclick = gerador;
 
-  });
-  
-  document.getElementById('execCopy').addEventListener('click', execCopy);
-  function execCopy() {
-    document.querySelector("#input").select();
-    document.execCommand("copy");
-  }
-
-
-gerador()
